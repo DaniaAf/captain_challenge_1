@@ -1,0 +1,81 @@
+.container {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+  background-color: #f7e1a5;
+}
+
+.title {
+  padding-top: 13px;
+  h1 {
+    color: white;
+  }
+}
+
+.game-explanation {
+  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), asset-url('background.png');
+  background-size:100% 100%;
+  text-align:center;
+
+}
+
+
+.welcome-text-container {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-text p {
+  color: white;
+  font-size: bold;
+  margin-bottom: 75px;
+}
+
+.battle-button {
+  margin-bottom: 30px;
+  top: 20px;
+  height: 60px;
+  width: 150px;
+  padding-top: 1.15em !important;
+  a {
+    color: white;
+  }
+}
+
+.history-button {
+  margin-bottom: 30px;
+}
+
+.btns-battle {
+  display: grid;
+}
+
+
+.avatars-row{
+  width: 100% !important;
+  margin-right: 50px !important;
+  margin-left: 50px !important;
+}
+
+.avatars-container{
+  display: grid;
+  padding-bottom: 40px;
+}
+
+.avatars-list {
+  padding-top: 50px;
+  min-height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.avatars-container a {
+  margin: auto;
+}
+
+
+

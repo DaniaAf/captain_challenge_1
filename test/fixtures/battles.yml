@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  winner: MyString
+  player_one: one
+  player_two: one
+  weapon_one: one
+  weapon_two: one
+  shield_one: one
+  shield_two: one
+
+two:
+  winner: MyString
+  player_one: two
+  player_two: two
+  weapon_one: two
+  weapon_two: two
+  shield_one: two
+  shield_two: two

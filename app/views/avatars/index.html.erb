@@ -1,0 +1,96 @@
+<div class= 'container'>
+  <div class= 'game-explanation'>
+    <div class= 'title'>
+      <h1>Captain's Game</h1>
+    </div>
+    <div class= 'welcome-text-container'>
+      <div class= 'welcome-text'>
+        <p>Welcome aboard, young sailors! <br>
+        Here you can try Captain Contrat's new game. <br>
+        You'll be able to create new avatars if you like, <br> and launch a fight between your favorite characters ! <br>
+        Enjoy ! :)
+        </p>
+      </div>
+
+     </div>
+
+    <div class='btns-battle'>
+    <%= link_to new_battle_path do %>
+      <div class ="battle-button btn btn-primary">
+        Launch a Battle !
+      </div>
+    <% end %>
+
+    <%= link_to battles_path do %>
+      <div class ="history-button btn btn-secondary">
+        History of battles
+      </div>
+    <% end %>
+    </div>
+
+
+
+  </div>
+
+  <div class= 'title'>
+      <h2>All my avatars</h2>
+    </div>
+
+  <div class='avatars-container'>
+    <div class="avatars-list">
+      <div class="row avatars-row">
+        <% @avatars.each do |avatar| %>
+          <div class="col-sm-3">
+            <%= link_to avatar_path(avatar) do %>
+              <div class='captain-card'>
+                <h2 class="name-card"><%= avatar.name %> </h2>
+                <div class='avatar-img'>
+                <%= cl_image_tag avatar.photo, height: 200, width: 200 %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <%= link_to new_avatar_path do %>
+      <div class ="new-avatar-button btn btn-primary">
+        Create new avatar
+      </div>
+    <% end %>
+  </div>
+
+<!--   <div class="avatars-container">
+  <div class="row avatars-row">
+    <#% @avatars.each do |avatar| %>
+      <div class="card-wrapper col-sm-3">
+        <div class="card avatar-card">
+
+          <div class="card-title">
+            <h5><#%= avatar.name %></h5>
+          </div>
+
+          <div class="card-img-wrapper">
+            <#%= cl_image_tag avatar.photo, class: "card-img-top",  height: 200%>
+          </div>
+
+        </div>
+      </div>
+    <#% end %>
+  </div> -->
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+

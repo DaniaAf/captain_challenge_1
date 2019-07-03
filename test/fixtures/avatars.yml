@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  photo: MyString
+  lives: 1
+  attacks: 1
+  victories: 1
+
+two:
+  name: MyString
+  photo: MyString
+  lives: 1
+  attacks: 1
+  victories: 1

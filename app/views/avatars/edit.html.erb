@@ -1,0 +1,28 @@
+<div class="container">
+  <div class= 'title'>
+    <h2>Edit avatar</h2>
+  </div>
+
+  <div class="avatar-form">
+    <%= simple_form_for(@avatar) do |f| %>
+      <%= f.input :name%>
+
+      <%= f.input :photo%>
+      <%= f.input :photo_cache, as: :hidden%>
+
+      <%= f.input :lives%>
+
+      <%= f.input :attacks%>
+
+       <%= f.submit class: 'btn btn-primary'%>
+    <% end %>
+  </div>
+
+  <div class="back">
+    <%= link_to avatar_path(@avatar) do %>
+      <i class="fas fa-chevron-left"></i>
+            Back to avatar
+    <% end %>
+  </div>
+
+</div>

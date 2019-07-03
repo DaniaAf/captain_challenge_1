@@ -1,0 +1,75 @@
+<div class="new-battle-page container">
+  <div class= "title title-battle">
+    <h2>Launch a new battle</h2>
+  </div>
+
+  <div class="form-container">
+    <div class= "input">
+      <%= form_for @battle do |f| %>
+        <div class="players-form form">
+
+          <div class="player-one">
+            <h3>Player One</h3>
+            <div class="form-field">
+              <%= f.label :player_one %>
+              <br>
+              <%= f.collection_select(:player_one_id , Avatar.all, :id, :name) %>
+            </div>
+
+            <br>
+            <div class="form-field">
+              <%= f.label :weapon_one %>
+              <br>
+              <%= f.collection_select(:weapon_one_id , Weapon.all, :id, :name) %>
+            </div>
+
+            <br>
+            <div class="form-field">
+              <%= f.label :shield_one %>
+              <br>
+              <%= f.collection_select(:shield_one_id , Shield.all, :id, :name) %>
+            </div>
+          </div>
+
+
+          <div class="player-two">
+            <h3>Player Two</h3>
+            <div class="form-field">
+              <%= f.label :player_two %>
+              <br>
+              <%= f.collection_select(:player_two_id , Avatar.all, :id, :name) %>
+            </div>
+
+            <br>
+            <div class="form-field">
+              <%= f.label :weapon_two %>
+              <br>
+              <%= f.collection_select(:weapon_two_id , Weapon.all, :id, :name) %>
+            </div>
+
+            <br>
+            <div class="form-field">
+              <%= f.label :shield_two %>
+              <br>
+              <%= f.collection_select(:shield_two_id , Shield.all, :id, :name) %>
+            </div>
+          </div>
+
+          <%= f.submit class: 'create-battle-btn btn btn-primary'%>
+          <br>
+          <br>
+
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+
+  <div class="back">
+    <%= link_to avatars_path do %>
+      <i class="fas fa-chevron-left"></i>
+            Back to avatars
+    <% end %>
+  </div>
+
+</div>

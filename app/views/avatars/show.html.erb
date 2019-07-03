@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="title">
+    <h2><%= @avatar.name %></h2>
+  </div>
+
+  <div class="avatar-container">
+    <div class="information-content">
+
+      <div class="avatar-img">
+      <%= cl_image_tag @avatar.photo, height: 350, width: 320 %>
+      </div>
+
+      <div class="avatar-information">
+        <p> Lives: <%= @avatar.lives %></p>
+        <p> Attacks: <%= @avatar.attacks %></p>
+        <p> Number of battles: <%= @avatar.first_players.count + @avatar.second_players.count %></p>
+        <p> Victories: <%= @avatar.victories %> </p>
+
+        <% if @avatar.victories == 0 || @avatar.first_players.count + @avatar.second_players.count == 0 %>
+          <p>Success Rate: 0% </p>
+        <% else %>
+          <p> Success Rate: <%= (@avatar.victories / (@avatar.first_players.count + @avatar.second_players.count).to_f * 100).round(1) %>% </p>
+        <% end %>
+
+        <div class="avatar-action">
+
+          <%= link_to edit_avatar_path do %>
+            <i class="fas fa-pencil-alt"> Edit</i>
+          <% end %>
+
+          <%= link_to avatar_path, method: :delete do %>
+          <i class="delete-logo fas fa-trash-alt"> Delete</i>
+          <% end %>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="create-new-avatar-btn">
+      <%= link_to new_avatar_path do %>
+        <div class ="new-avatar-button btn btn-primary">
+          Create new avatar
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+
+
+  <div class="back">
+    <%= link_to avatars_path do %>
+      <i class="fas fa-chevron-left"></i>
+            Back to avatars
+    <% end %>
+  </div>
+
+
+
+
+</div>
+
+
+

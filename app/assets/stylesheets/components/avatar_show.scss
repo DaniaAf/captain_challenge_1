@@ -1,0 +1,33 @@
+.information-content {
+  width: 50%;
+  margin: 100px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.avatar-container {
+  min-height: 60vh;
+}
+
+.avatar-information p {
+  font-size: 30px;
+}
+
+.delete-logo{
+  margin-left: 25px;
+}
+
+i {
+  font-size: 20px;
+}
+
+.create-new-avatar-btn {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.new-avatar-button{
+  height: 60px;
+  padding-top: 1.15em !important;
+}

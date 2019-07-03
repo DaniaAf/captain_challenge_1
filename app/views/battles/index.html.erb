@@ -1,0 +1,50 @@
+<div class="container">
+
+  <div class="title">
+    <h2>All Battles (<%= @battles.count %>)</h2>
+
+  </div>
+
+  <div class='battles-container'>
+    <div class="battles-list">
+      <div class="row battles-row">
+        <% @battles.each do |battle| %>
+          <div class="col-sm-4">
+            <%= link_to battle_path(battle) do %>
+              <div class="captain-card">
+                <div class="winner">
+                  <h5><%= battle.player_one.name + ' Vs ' + battle.player_two.name %></h5>
+                  <p><%= 'The winner is ... ' + battle.winner.upcase  + ' !!'%> <p>
+                </div>
+
+                <div class="battle-card">
+                  <div class="player-one">
+                    <%= cl_image_tag battle.player_one.photo, height: 100, width: 100, class: 'player-photo'%>
+                    <p class="battle-avatar-info"><%= 'Player One: ' %><p>
+                    <p class="battle-avatar-info"><%= battle.shield_one.name + ' - ' + battle.weapon_one.name %></p>
+                  </div>
+
+                  <div class="player-two">
+                    <%= cl_image_tag battle.player_two.photo, height: 100, width: 100, class: 'player-photo' %>
+                    <p class="battle-avatar-info"><%= 'Player Two: ' %><p>
+                    <p class="battle-avatar-info"><%= battle.shield_two.name + ' - ' + battle.weapon_two.name %></p>
+                  </div>
+                </div>
+
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+  <div class="back">
+    <%= link_to avatars_path do %>
+      <i class="fas fa-chevron-left"></i>
+            Back to avatars
+    <% end %>
+  </div>
+
+</div>
+
+

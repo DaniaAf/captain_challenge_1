@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="title">
+    <h2><%= @battle.player_one.name + ' Vs ' + @battle.player_two.name %></h2>
+    <h2><%= @battle.created_at.to_s.first(10) %></h2>
+  </div>
+
+  <div class="battle-container">
+    <div class="battle captain-card">
+
+      <div class="winner battle-title">
+        <h5><%= @battle.player_one.name + ' Vs ' + @battle.player_two.name %></h5>
+        <p class="winner-sentence"><%= 'The winner is ... ' + @battle.winner.upcase  + ' !!'%> <p>
+      </div>
+
+      <div class="battle-card">
+        <div class="player-one">
+          <p><%= 'Player One: ' %><p>
+          <%= cl_image_tag @battle.player_one.photo, height: 250, width: 250%>
+          <p class="battle-info"><%= @battle.shield_one.name + ' - ' + @battle.weapon_one.name %></p>
+        </div>
+
+        <div class="player-two">
+          <p><%= 'Player Two: ' %><p>
+          <%= cl_image_tag @battle.player_two.photo, height: 250, width: 250%>
+          <p class="battle-info"><%= @battle.shield_two.name + ' - ' + @battle.weapon_two.name %></p>
+        </div>
+      </div>
+
+      <%= link_to new_battle_path do %>
+        <div class ="battle-button btn btn-primary">
+          Launch a Battle !
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+
+
+  <br>
+  <%= link_to "Back to Battles' History", battles_path %>
+  <br>
+
+  <div class="back">
+    <%= link_to avatars_path do %>
+      <i class="fas fa-chevron-left"></i>
+            Back to avatars
+    <% end %>
+  </div>
+
+
+</div>
+
+

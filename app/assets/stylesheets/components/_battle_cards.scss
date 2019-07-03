@@ -1,0 +1,47 @@
+.battle-card{
+  display: flex;
+  justify-content: space-around;
+}
+
+h5 {
+  margin: 0 !important;
+}
+
+.battles-row{
+  width: 100% !important;
+  margin-top: 70px;
+  margin-right: 0 !important;
+  margin-left: 0!important;
+}
+
+
+.battle{
+  width: 60%;
+  margin: 40px auto;
+  height: 440px !important;
+}
+
+.battle-title h5{
+  margin: 15px !important;
+  font-size: 30px;
+}
+
+p.winner-sentence {
+  font-size: 24px;
+}
+
+p.battle-info{
+  font-size: 18px;
+}
+
+.battle-container {
+  min-height: 60vh;
+}
+
+.player-one p , .player-two p{
+  margin: 0;
+}
+
+.player-photo{
+  margin-bottom: 10px;
+}
