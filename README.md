@@ -18,6 +18,8 @@ Seed : created model’s instances.
 
 ## Development
 
+- bundle install
+- yarn install
 - rails db:seed
 - Cloudinary key in .env
 
