@@ -16,6 +16,12 @@ Battle: related to 2 avatars through foreign keys. (it has 2 avatars’ id and a
 
 Seed : created model’s instances.
 
+## Development
+
+- rails db:seed
+- Cloudinary key in .env
+
+
 ## Peculiarity
 
 Cloudinary & Carrierwave gem for hosting and uploading photos of avatars.
